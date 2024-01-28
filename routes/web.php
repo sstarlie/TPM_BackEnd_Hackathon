@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GrupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,11 @@ Route::get('/home', [HomeController::class, 'home'])->name('rumah');
 // });
 
 Route::post('/send-mail-user-info', [EmailController::class, 'SendMail'])->name('SendMail')->middleware('auth');
+
+Route::get('/grup',[GrupController::class, 'index'])->name('grup.index');
+Route::get('/grup/create',[GrupController::class, 'create'])->name('grup.create');
+Route::post('/grup/store',[GrupController::class, 'store'])->name('grup.store');
+
+Route::get('/grup/{grup}/edit',[GrupController::class, 'edit'])->name('grup.edit');
+Route::put('/grup/{grup}/update',[GrupController::class, 'update'])->name('grup.update');
+Route::delete('/grup/{grup}/destroy',[GrupController::class, 'destroy'])->name('grup.destroy');
