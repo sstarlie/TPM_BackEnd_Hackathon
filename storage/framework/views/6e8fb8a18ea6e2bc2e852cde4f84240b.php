@@ -1,20 +1,4 @@
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
  <!DOCTYPE html>
 <html lang="EN">
 
@@ -43,10 +27,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('/navbar') }}">Dashboard</a>
+                        <a class="nav-link active" aria-current="page" href="<?php echo e(url('/navbar')); ?>">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/profile') }}">Profile</a>
+                        <a class="nav-link" href="<?php echo e(url('/profile')); ?>">Profile</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +59,7 @@
                         </ul>
                     </div>
                     <div class="card-footer text-center py-2">
-                        <a class="btn btn-link btn-sm" href="{{ url('/profile') }}">View Profile </a>
+                        <a class="btn btn-link btn-sm" href="<?php echo e(url('/profile')); ?>">View Profile </a>
                     </div>
                 </div>
             </div>
@@ -89,3 +73,4 @@
 
 </html>
 
+<?php /**PATH D:\TPM\Gruppppp-master\resources\views/dashboard.blade.php ENDPATH**/ ?>
